@@ -1,11 +1,11 @@
 # Showtime-
 # Movie Booking using OOP in python
 
-# Youtube Brief Link:
+# Youtube Brief Link: 
 # Movie/ Seat Booking by Rameez Ur Rehman
 
 
-class showtime:                                                                        # main class
+class showtime:                                                                     #   main class
     title = "Welcome to Showtime"
     title1 = "Experience Reality!"
     print(title.center(150))
@@ -55,7 +55,7 @@ class showtime:                                                                 
         print(end="  ")
 
     # if user input=1:
-    def seats(self):                                                                 #function to show matrix
+    def seats(self):                                                                 #  function to show matrix
         print("\nCinema :\n")
         a = 0
         b = 0
@@ -70,7 +70,7 @@ class showtime:                                                                 
             print(" ".join(i), sep=",")
 
     #     if user input=2:
-    def buy(self):                                                                  #function to buy a ticket
+    def buy(self):                                                                  #   function to buy a ticket
         a = int(input("Enter the row you want to book\n"))
         b = int(input("Enter the column you want to book\n"))
         if self.matrix[a - 1][b - 1] == "B":
@@ -89,7 +89,7 @@ class showtime:                                                                 
 
 
 
-        if self.pr == 'Y' or self.pr == 'y':                                        #stores user info in dict
+        if self.pr == 'Y' or self.pr == 'y':                                        #   stores user info in dict
             u_dict = {}
             Uname = input("Thanks for booking,n Enter your name\n")
             Ugen = input("Enter your gender\n")
@@ -109,8 +109,8 @@ class showtime:                                                                 
 
 
 
-    def total_revenue(self):                                                         #called in statistics for total revenue
-        if self.num_seats < 60:                                                      #for upper half
+    def total_revenue(self):                                                         #  called in statistics for total revenue
+        if self.num_seats < 60:                                                      #  for upper half
             self.total_income = self.num_seats * 10                                  #
         elif self.num_seats >= 60:
             for i in range(0, int(self.row / 2)):
@@ -121,7 +121,7 @@ class showtime:                                                                 
         return self.total_income
 
     #     if user input=3
-    def stats(self):                                                                 #function for the statistics
+    def stats(self):                                                                 #  function for the statistics
         print("Number of purchased tickets : ", self.seat_count)
         self.percentage = (self.seat_count / self.num_seats) * 100
         print("Percentage of Tickets Booked : ", "{:.2f}".format(self.percentage), "%")
@@ -134,7 +134,7 @@ class showtime:                                                                 
 
 
     #     if user input=4
-    def info(self):                                                                  #function to display info
+    def info(self):                                                                  #  function to display info
         self.check_a = int(input("Enter your row number\n"))
         self.check_b = int(input("Enter your seat number \n"))
         if self.matrix[self.check_a - 1][self.check_b - 1] == 'B':
